@@ -1,7 +1,45 @@
 :root {
     font-family: Arial, Helvetica, sans-serif;
+    --blue-accent: rgb(0, 170, 255);
+    --white-bg: #eee;
+    --lgrey-big: #bbb;
 }
 
 * {
     box-sizing: content-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.grid-container,
+.grid-container * {
+    /* border: 1px solid red; */
+}
+
+.grid-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
+}
+
+.sidebar,
+.header,
+.main-content {
+    height: 100%;
+    width: 100%;
+}
+
+.sidebar {
+    background: var(--blue-accent);
+    grid-row: 1 / -1;
+}
+
+.header {
+    background: var(--white-bg);
+}
+
+.main-content {
+    background: var(--lgrey-big);
 }
