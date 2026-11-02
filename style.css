@@ -29,11 +29,40 @@
 .main-content {
     height: 100%;
     width: 100%;
+    display: grid;
 }
 
 .sidebar {
     background: var(--blue-accent);
+    color: var(--white-bg);
     grid-row: 1 / -1;
+    grid-template-rows: 100px 400px 1fr;
+}
+
+.sidebar .branding {
+    margin-left: 1rem;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.sidebar .navigation > ul {
+    display: grid;
+    gap: 1rem;
+}
+
+.sidebar .navigation li {
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: 110%;
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+.branding img,
+.navigation img {
+    width: 1em;
+    height: 1em;
+    margin-right: 0.5em;
 }
 
 .header {
