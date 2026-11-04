@@ -11,9 +11,17 @@
     padding: 0px;
 }
 
-.grid-container,
-.grid-container * {
-    /* border: 1px solid red; */
+img,
+img {
+    height: 1em;
+    width: 1em;
+}
+
+img[class="pfp"] {
+    height: revert;
+    width: revert;
+    border-radius: 100%;
+    /* border: 1px solid black; */
 }
 
 .grid-container {
@@ -33,6 +41,7 @@
 }
 
 .sidebar {
+    padding-top: 1rem;
     background: var(--blue-accent);
     color: var(--white-bg);
     grid-row: 1 / -1;
@@ -65,8 +74,74 @@
     margin-right: 0.5em;
 }
 
+.branding * {
+    vertical-align: middle;
+}
+
 .header {
     background: var(--white-bg);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header .searchbar,
+.header .profile-info {
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+}
+
+.header div {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.header input {
+    width: 40vw;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--lgrey-big);
+    height: 1.5em;
+}
+
+.profile-buttons {
+    font-weight: bolder;
+}
+
+.profile-buttons img[class="pfp"] {
+    border-radius: 100%;
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.header > .profile-info {
+    display: grid;
+    align-items: end;
+    gap: 6px 28px;
+    grid-template: 1fr 1fr / 50px 1fr;
+    font-weight: bold;
+}
+
+.profile-info p:last-of-type {
+    font-size: larger;
+    align-self: start;
+}
+
+.profile-info img {
+    height: 4em;
+    width: 4em;
+    grid-row: 1 / -1;
+}
+
+.header button {
+    color: var(--white-bg);
+    background-color: var(--blue-accent);
+    border: none;
+    border-radius: 24px;    
+    font-weight: bold;
+    padding: 0.5em 1.5em 0.5em 1.5em;
 }
 
 .main-content {
