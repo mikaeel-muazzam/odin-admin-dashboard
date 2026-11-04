@@ -119,19 +119,22 @@ img[class="pfp"] {
     width: 2.5em;
 }
 
+.trending > div,
 .header > .profile-info {
     display: grid;
     align-items: end;
     gap: 6px 28px;
-    grid-template: 1fr 1fr / 50px 1fr;
+    grid-template: 1fr 1fr / 4em 1fr;
     font-weight: bold;
 }
 
+.trending p:last-of-type,
 .profile-info p:last-of-type {
     font-size: larger;
     align-self: start;
 }
 
+.trending img,
 .profile-info img {
     height: 4em;
     width: 4em;
@@ -193,40 +196,48 @@ img[class="pfp"] {
     place-items: center;
 }
 
+.trending,
 .announcements {
     grid-template-rows: 30px;
     grid-auto-rows: 1fr;
 }
 
+.trending h2,
 .announcements h2 {
     justify-self: left;
 }
 
+.trending p,
 .announcements p {
     font-size: 80%;
     text-overflow: ellipsis;
     margin: 0.2rem 1rem 1rem 1rem;
 }
 
+.trending h3,
 .announcements h3 {
     margin: 1rem 1rem 0.2rem 1rem;
 }
 
+.trending div,
 .announcements > div {
     background-color: var(--white-bg);
 }
 
+.trending div,
 .announcements div {
     border-top: 1px solid var(--lgrey-big);
     border-bottom: 1px solid var(--lgrey-big);
 }
 
+.trending div,
 .announcements div:first-of-type {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     border-top: none;
 }
 
+.trending div,
 .announcements div:last-of-type {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
