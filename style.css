@@ -151,3 +151,7 @@ img[class="pfp"] {
     background: var(--lgrey-big);
     grid-template: 1fr 1fr / 3fr 1fr;
 }
+
+.main-content > .projects {
+    grid-row: 1 / -1;
+}
