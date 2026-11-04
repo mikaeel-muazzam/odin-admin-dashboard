@@ -157,8 +157,10 @@ img[class="pfp"] {
     grid-row: 1 / -1;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 30px;
+    grid-auto-rows: 1fr;
     place-items: center center;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 0px;
 }
 
 .projects > h2 {
@@ -169,7 +171,7 @@ img[class="pfp"] {
 .projects > .project-card {
     padding: 1rem;
     width: 85%;;
-    height: 85%;
+    height: min(85%, 200px);
     background-color: var(--white-bg);
     border-radius: 12px;
     box-shadow: -6px 0px 0px 0px rgb(255, 149, 0);
@@ -188,4 +190,45 @@ img[class="pfp"] {
 
 .main-content > div {
     display: grid;
+    place-items: center;
+}
+
+.announcements {
+    grid-template-rows: 30px;
+    grid-auto-rows: 1fr;
+}
+
+.announcements h2 {
+    justify-self: left;
+}
+
+.announcements p {
+    font-size: 80%;
+    text-overflow: ellipsis;
+    margin: 0.2rem 1rem 1rem 1rem;
+}
+
+.announcements h3 {
+    margin: 1rem 1rem 0.2rem 1rem;
+}
+
+.announcements > div {
+    background-color: var(--white-bg);
+}
+
+.announcements div {
+    border-top: 1px solid var(--lgrey-big);
+    border-bottom: 1px solid var(--lgrey-big);
+}
+
+.announcements div:first-of-type {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top: none;
+}
+
+.announcements div:last-of-type {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-bottom: none;
 }
