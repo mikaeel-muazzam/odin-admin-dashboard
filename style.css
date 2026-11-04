@@ -41,11 +41,14 @@ img[class="pfp"] {
 }
 
 .sidebar {
-    padding-top: 1rem;
     background: var(--blue-accent);
     color: var(--white-bg);
     grid-row: 1 / -1;
     grid-template-rows: 100px 400px 1fr;
+}
+
+.sidebar > *:first-child {
+    padding-top: 1rem;
 }
 
 .sidebar .branding {
@@ -146,4 +149,5 @@ img[class="pfp"] {
 
 .main-content {
     background: var(--lgrey-big);
+    grid-template: 1fr 1fr / 3fr 1fr;
 }
